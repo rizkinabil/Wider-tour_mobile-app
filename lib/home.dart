@@ -10,7 +10,7 @@ class DashboardPage extends StatefulWidget {
 
 class _DashboarPageState extends State<DashboardPage> {
   List<NavigationItem> navigationItems = getNavigationItemList();
-  NavigationItem ? selectedItem;
+  NavigationItem? selectedItem;
 
   List<Place> places = getPlaceList();
   List<Destination> destinations = getDestinationList();
@@ -107,7 +107,7 @@ class _DashboarPageState extends State<DashboardPage> {
           ),
           Container(
             height: 120,
-            padding: const EdgeInsets.only(  
+            padding: const EdgeInsets.only(
               top: 8,
               left: 16,
             ),
@@ -135,19 +135,19 @@ class _DashboarPageState extends State<DashboardPage> {
               horizontal: 16,
               vertical: 8,
             ),
-            child: Text(
-              "Featured Places",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            // child: Text(
+            //   "Featured Places",
+            //   style: TextStyle(
+            //     fontSize: 18,
+            //     fontWeight: FontWeight.bold,
+            //   ),
+            // ),
           ),
           SizedBox(
             height: 90,
             child: PageView(
               physics: const BouncingScrollPhysics(),
-              children: buildFeatureds(),
+              // children: buildFeatureds(),
             ),
           ),
         ],
@@ -158,18 +158,18 @@ class _DashboarPageState extends State<DashboardPage> {
           horizontal: 16,
           vertical: 8,
         ),
-        decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10),
-              topRight: Radius.circular(10),
-              bottomLeft: Radius.circular(30),
-              bottomRight: Radius.circular(30),
-            )),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: buildNavigationItems(),
-        ),
+        // decoration: const BoxDecoration(
+        //     color: Colors.white,
+        //     borderRadius: BorderRadius.only(
+        //       topLeft: Radius.circular(10),
+        //       topRight: Radius.circular(10),
+        //       bottomLeft: Radius.circular(30),
+        //       bottomRight: Radius.circular(30),
+        //     )),
+        // child: Row(
+        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //   children: buildNavigationItems(),
+        // ),
       ),
     );
   }
@@ -332,7 +332,6 @@ class _DashboarPageState extends State<DashboardPage> {
               const SizedBox(
                 height: 4,
               ),
-              
             ],
           ),
         ),
@@ -340,107 +339,107 @@ class _DashboarPageState extends State<DashboardPage> {
     );
   }
 
-  List<Widget> buildFeatureds() {
-    List<Widget> list = [];
-    for (var featured in featureds) {
-      list.add(buildFeatured(featured));
-    }
-    return list;
-  }
+  // List<Widget> buildFeatureds() {
+  //   List<Widget> list = [];
+  //   for (var featured in featureds) {
+  //     list.add(buildFeatured(featured));
+  //   }
+  //   return list;
+  // }
 
-  Widget buildFeatured(Featured featured) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 12,
-      ),
-      child: Card(
-        elevation: 0,
-        clipBehavior: Clip.antiAlias,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(15),
-          ),
-        ),
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(featured.imageUrl),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  featured.year,
-                  style: const TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-                const SizedBox(
-                  height: 4,
-                ),
-                Text(
-                  featured.title,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
+  // Widget buildFeatured(Featured featured) {
+  //   return Padding(
+  //     padding: const EdgeInsets.symmetric(
+  //       horizontal: 12,
+  //     ),
+  //     child: Card(
+  //       elevation: 0,
+  //       clipBehavior: Clip.antiAlias,
+  //       shape: const RoundedRectangleBorder(
+  //         borderRadius: BorderRadius.all(
+  //           Radius.circular(15),
+  //         ),
+  //       ),
+  //       child: Container(
+  //         decoration: BoxDecoration(
+  //           image: DecorationImage(
+  //             image: AssetImage(featured.imageUrl),
+  //             fit: BoxFit.cover,
+  //           ),
+  //         ),
+  //         child: Padding(
+  //           padding: const EdgeInsets.symmetric(
+  //             horizontal: 16,
+  //           ),
+  //           child: Column(
+  //             crossAxisAlignment: CrossAxisAlignment.start,
+  //             mainAxisAlignment: MainAxisAlignment.center,
+  //             children: <Widget>[
+  //               Text(
+  //                 featured.year,
+  //                 style: const TextStyle(
+  //                   fontSize: 24,
+  //                   fontWeight: FontWeight.bold,
+  //                   color: Colors.white,
+  //                 ),
+  //               ),
+  //               const SizedBox(
+  //                 height: 4,
+  //               ),
+  //               Text(
+  //                 featured.title,
+  //                 style: const TextStyle(
+  //                   fontSize: 16,
+  //                   fontWeight: FontWeight.bold,
+  //                   color: Colors.white,
+  //                 ),
+  //               ),
+  //             ],
+  //           ),
+  //         ),
+  //       ),
+  //     ),
+  //   );
+  // }
 
-  List<Widget> buildNavigationItems() {
-    List<Widget> list = [];
-    for (var navigationItem in navigationItems) {
-      list.add(buildNavigationItem(navigationItem));
-    }
-    return list;
-  }
+  // List<Widget> buildNavigationItems() {
+  //   List<Widget> list = [];
+  //   for (var navigationItem in navigationItems) {
+  //     list.add(buildNavigationItem(navigationItem));
+  //   }
+  //   return list;
+  // }
 
-  Widget buildNavigationItem(NavigationItem item) {
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          selectedItem = item;
-        });
-      },
-      child: SizedBox(
-        width: 50,
-        child: Stack(
-          children: <Widget>[
-            Align(
-              alignment: Alignment.topCenter,
-              child: Container(
-                width: 40,
-                height: 3,
-                color:
-                    selectedItem == item ? kPrimaryColor : Colors.transparent,
-              ),
-            ),
-            Center(
-              child: Icon(
-                item.iconData,
-                color: selectedItem == item ? kPrimaryColor : Colors.grey[400],
-                size: 28,
-              ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
+  // Widget buildNavigationItem(NavigationItem item) {
+  //   return GestureDetector(
+  //     onTap: () {
+  //       setState(() {
+  //         selectedItem = item;
+  //       });
+  //     },
+  //     child: SizedBox(
+  //       width: 50,
+  //       child: Stack(
+  //         children: <Widget>[
+  //           Align(
+  //             alignment: Alignment.topCenter,
+  //             child: Container(
+  //               width: 40,
+  //               height: 3,
+  //               color:
+  //                   selectedItem == item ? kPrimaryColor : Colors.transparent,
+  //             ),
+  //           ),
+  //           Center(
+  //             child: Icon(
+  //               item.iconData,
+  //               color: selectedItem == item ? kPrimaryColor : Colors.grey[400],
+  //               size: 28,
+  //             ),
+  //           )
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
 }
