@@ -135,42 +135,45 @@ class _DashboarPageState extends State<DashboardPage> {
               horizontal: 16,
               vertical: 8,
             ),
-            // child: Text(
-            //   "Featured Places",
-            //   style: TextStyle(
-            //     fontSize: 18,
-            //     fontWeight: FontWeight.bold,
-            //   ),
-            // ),
-          ),
-          SizedBox(
-            height: 90,
-            child: PageView(
-              physics: const BouncingScrollPhysics(),
-              // children: buildFeatureds(),
+            child: Text(
+              "Recommendation",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
+          SizedBox(
+            height: 120,
+            child: PageView(
+              physics: const BouncingScrollPhysics(),
+              children: buildFeatureds(),
+            ),
+          ),
+          const SizedBox(
+            height: 20
+          )
         ],
       ),
-      bottomNavigationBar: Container(
-        height: 60,
-        margin: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 8,
-        ),
-        // decoration: const BoxDecoration(
-        //     color: Colors.white,
-        //     borderRadius: BorderRadius.only(
-        //       topLeft: Radius.circular(10),
-        //       topRight: Radius.circular(10),
-        //       bottomLeft: Radius.circular(30),
-        //       bottomRight: Radius.circular(30),
-        //     )),
-        // child: Row(
-        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //   children: buildNavigationItems(),
-        // ),
-      ),
+      // bottomNavigationBar: Container(
+      //   height: 60,
+      //   margin: const EdgeInsets.symmetric(
+      //     horizontal: 16,
+      //     vertical: 8,
+      //   ),
+      //   // decoration: const BoxDecoration(
+      //   //     color: Colors.white,
+      //   //     borderRadius: BorderRadius.only(
+      //   //       topLeft: Radius.circular(10),
+      //   //       topRight: Radius.circular(10),
+      //   //       bottomLeft: Radius.circular(30),
+      //   //       bottomRight: Radius.circular(30),
+      //   //     )),
+      //   // child: Row(
+      //   //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   //   children: buildNavigationItems(),
+      //   // ),
+      // ),
     );
   }
 
@@ -339,68 +342,68 @@ class _DashboarPageState extends State<DashboardPage> {
     );
   }
 
-  // List<Widget> buildFeatureds() {
-  //   List<Widget> list = [];
-  //   for (var featured in featureds) {
-  //     list.add(buildFeatured(featured));
-  //   }
-  //   return list;
-  // }
+  List<Widget> buildFeatureds() {
+    List<Widget> list = [];
+    for (var featured in featureds) {
+      list.add(buildFeatured(featured));
+    }
+    return list;
+  }
 
-  // Widget buildFeatured(Featured featured) {
-  //   return Padding(
-  //     padding: const EdgeInsets.symmetric(
-  //       horizontal: 12,
-  //     ),
-  //     child: Card(
-  //       elevation: 0,
-  //       clipBehavior: Clip.antiAlias,
-  //       shape: const RoundedRectangleBorder(
-  //         borderRadius: BorderRadius.all(
-  //           Radius.circular(15),
-  //         ),
-  //       ),
-  //       child: Container(
-  //         decoration: BoxDecoration(
-  //           image: DecorationImage(
-  //             image: AssetImage(featured.imageUrl),
-  //             fit: BoxFit.cover,
-  //           ),
-  //         ),
-  //         child: Padding(
-  //           padding: const EdgeInsets.symmetric(
-  //             horizontal: 16,
-  //           ),
-  //           child: Column(
-  //             crossAxisAlignment: CrossAxisAlignment.start,
-  //             mainAxisAlignment: MainAxisAlignment.center,
-  //             children: <Widget>[
-  //               Text(
-  //                 featured.year,
-  //                 style: const TextStyle(
-  //                   fontSize: 24,
-  //                   fontWeight: FontWeight.bold,
-  //                   color: Colors.white,
-  //                 ),
-  //               ),
-  //               const SizedBox(
-  //                 height: 4,
-  //               ),
-  //               Text(
-  //                 featured.title,
-  //                 style: const TextStyle(
-  //                   fontSize: 16,
-  //                   fontWeight: FontWeight.bold,
-  //                   color: Colors.white,
-  //                 ),
-  //               ),
-  //             ],
-  //           ),
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
+  Widget buildFeatured(Featured featured) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+      ),
+      child: Card(
+        elevation: 0,
+        clipBehavior: Clip.antiAlias,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
+          ),
+        ),
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(featured.imageUrl),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  featured.year,
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(
+                  height: 4,
+                ),
+                Text(
+                  featured.title,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 
   // List<Widget> buildNavigationItems() {
   //   List<Widget> list = [];

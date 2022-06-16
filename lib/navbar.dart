@@ -20,11 +20,8 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   int _currentIndex = 0;
   final List<Widget> _children = <Widget>[
     DashboardPage(),
-    Notifikasi(),
-    // Aktivitas(),
-
-    // Shelter(),
-    Akun()
+    const Notifikasi(),
+    const Akun()
   ];
 
   @override
@@ -34,7 +31,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           currentIndex: _currentIndex,
           showSelectedLabels: false,
           showUnselectedLabels: false,
-          items: [
+          items: const [
             // BottomNavigationBarItem(
             //   icon: Image.asset(
             //     'Icons.home',

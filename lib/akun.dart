@@ -1,46 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:wider/theme.dart';
 
 class Akun extends StatelessWidget {
   const Akun({Key? key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
       child: Column(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/images/login.png'),
                     fit: BoxFit.cover)),
-            child: Container(
+            child: SizedBox(
               width: double.infinity,
               height: 200,
               child: Container(
-                alignment: Alignment(0.0, 2.5),
-                child: CircleAvatar(
+                alignment: const Alignment(0.0, 2.5),
+                child: const CircleAvatar(
                   backgroundImage: AssetImage('assets/images/profile.jpg'),
                   radius: 60.0,
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
-          Text(
-            "Rizky Nabil Aufa",
+          const Text(
+            "Nurlaili rizki trisurya satriaman",
             style: TextStyle(
                 fontSize: 25.0,
                 color: Colors.blueGrey,
                 letterSpacing: 2.0,
                 fontWeight: FontWeight.w400),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Text(
+          const Text(
             "Bandung, Indonesia",
             style: TextStyle(
                 fontSize: 18.0,
@@ -48,10 +48,10 @@ class Akun extends StatelessWidget {
                 letterSpacing: 2.0,
                 fontWeight: FontWeight.w300),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Text(
+          const Text(
             "App Developer at Telkom University",
             style: TextStyle(
                 fontSize: 15.0,
@@ -59,10 +59,10 @@ class Akun extends StatelessWidget {
                 letterSpacing: 2.0,
                 fontWeight: FontWeight.w300),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Card(
+          const Card(
               margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
               elevation: 2.0,
               child: Padding(
@@ -72,10 +72,10 @@ class Akun extends StatelessWidget {
                     style: TextStyle(
                         letterSpacing: 2.0, fontWeight: FontWeight.w300),
                   ))),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
-          Text(
+          const Text(
             "App Developer || Digital Marketer",
             style: TextStyle(
                 fontSize: 18.0,
@@ -84,7 +84,7 @@ class Akun extends StatelessWidget {
                 fontWeight: FontWeight.w300),
           ),
           Card(
-            margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
+            margin: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
@@ -92,7 +92,7 @@ class Akun extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Column(
-                      children: [
+                      children: const [
                         Text(
                           "Project",
                           style: TextStyle(
@@ -115,7 +115,7 @@ class Akun extends StatelessWidget {
                   ),
                   Expanded(
                     child: Column(
-                      children: [
+                      children: const [
                         Text(
                           "Followers",
                           style: TextStyle(
@@ -140,7 +140,7 @@ class Akun extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -153,19 +153,19 @@ class Akun extends StatelessWidget {
                 ),
                 child: Ink(
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                         colors: [Colors.pink, Colors.redAccent]),
                     borderRadius: BorderRadius.circular(30.0),
                   ),
                   child: Container(
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 100.0,
                       maxHeight: 40.0,
                     ),
                     alignment: Alignment.center,
-                    child: Text(
+                    child: const Text(
                       "Contact me",
                       style: TextStyle(
                           color: Colors.white,
@@ -183,19 +183,19 @@ class Akun extends StatelessWidget {
                 ),
                 child: Ink(
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                         colors: [Colors.pink, Colors.redAccent]),
                     borderRadius: BorderRadius.circular(80.0),
                   ),
                   child: Container(
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       maxWidth: 100.0,
                       maxHeight: 40.0,
                     ),
                     alignment: Alignment.center,
-                    child: Text(
+                    child: const Text(
                       "Portfolio",
                       style: TextStyle(
                           color: Colors.white,
