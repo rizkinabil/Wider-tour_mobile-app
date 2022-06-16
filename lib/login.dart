@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wider/home.dart';
+import 'package:wider/navbar.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -80,7 +81,8 @@ class _MyLoginState extends State<MyLogin> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>  DashboardPage()));
+                                  builder: (context) =>
+                                      MyBottomNavigationBar()));
                         },
                         icon: const Icon(Icons.arrow_forward),
                       ),
