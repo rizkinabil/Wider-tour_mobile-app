@@ -198,7 +198,7 @@ class _DetailState extends State<Detail> {
                         ),
 
                         Text(
-                          r"Rp " + widget.place.price.toStringAsFixed(2) + "/night",
+                          r"Rp " + widget.place.price.toStringAsFixed(3) + "/Malam",
                           style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -216,26 +216,31 @@ class _DetailState extends State<Detail> {
                     Container(
                       height: 60,
                       margin: const EdgeInsets.symmetric(vertical: 8,),
-                      decoration: BoxDecoration(
-                        color: kPrimaryColor,
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(10),
-                          topRight: Radius.circular(10),
-                          bottomLeft: Radius.circular(30),
-                          bottomRight: Radius.circular(30),
-                        )
-                      ),
-                      child: const Center(
-                        child: Text(
-                          "Book Now",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                      // decoration: BoxDecoration(
+                      //   color: kPrimaryColor,
+                      //   borderRadius: const BorderRadius.only(
+                      //     topLeft: Radius.circular(10),
+                      //     topRight: Radius.circular(10),
+                      //     bottomLeft: Radius.circular(30),
+                      //     bottomRight: Radius.circular(30),
+                      //   )
+                      child: Center(
+                        
+                        child: ElevatedButton(
+                          onPressed: (){
+                            Navigator.pushNamed(context, "/checkout");
+                          },
+                          style: ElevatedButton.styleFrom(
+                            primary: kPrimaryColor,
+                            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 20),
+                            
                           ),
+                          child: const Text('Booking'),
+                          
                         ),
                       ),
-                    ),
+                      ),
+                    
 
                   ],
                 ),

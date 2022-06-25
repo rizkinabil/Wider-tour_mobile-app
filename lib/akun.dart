@@ -30,7 +30,7 @@ class Akun extends StatelessWidget {
             height: 60,
           ),
           const Text(
-            "Nurlaili rizki trisurya satriaman",
+            "Rizki nabil aufa",
             style: TextStyle(
                 fontSize: 25.0,
                 color: Colors.blueGrey,

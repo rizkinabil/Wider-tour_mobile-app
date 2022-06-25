@@ -20,7 +20,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   int _currentIndex = 0;
   final List<Widget> _children = <Widget>[
     DashboardPage(),
-    const Notifikasi(),
+    ListPage(),
     const Akun()
   ];
 

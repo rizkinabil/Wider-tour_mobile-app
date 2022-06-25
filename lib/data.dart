@@ -31,7 +31,7 @@ class Place {
 List<Place> getPlaceList(){
   return <Place>[
     Place(
-      "Beautiful place for healing called Ubud",
+      "Tempat terbaik untuk Healing, UBUD!!",
       "Ubud, Bali",
       300,
       [
@@ -43,9 +43,9 @@ List<Place> getPlaceList(){
       false
     ),
     Place(
-      "The second largest city in Brazil, famous for its breathtaking landscape",
-      "Brazil",
-      2990,
+      "Dari Sabang sampai merauke, ini yang paling keren",
+      "Lombok",
+      299,
       [
         "assets/images/rio_0.jpg",
         "assets/images/rio_1.jpg",
@@ -55,9 +55,9 @@ List<Place> getPlaceList(){
       false
     ),
     Place(
-      "This city has been described as the cultural, financial, and media capital of the world",
-      "USA",
-      4870.5,
+      "Kota indah penuh dengan suasana asri",
+      "Bekasi",
+      480,
       [
         "assets/images/new_york_0.jpg",
         "assets/images/new_york_1.jpg",
@@ -67,9 +67,9 @@ List<Place> getPlaceList(){
       false
     ),
     Place(
-      "This city is built around a huge harbour and hosts many tourist attractions",
-      "Australia",
-      4120.5,
+      "Memang maniss",
+      "Manado",
+      712,
       [
         "assets/images/sidney_0.jpg",
         "assets/images/sidney_1.jpg",
@@ -77,9 +77,9 @@ List<Place> getPlaceList(){
       false
     ),
     Place(
-      "One of the largest Buddhist temples",
-      "Hong Kong",
-      3990,
+      "jogja jogja jogja istimewa",
+      "Jogja",
+      600,
       [
         "assets/images/temple_0.jpg",
         "assets/images/temple_1.jpg",
@@ -88,9 +88,9 @@ List<Place> getPlaceList(){
       false
     ),
     Place(
-      "These red cabins are beautiful",
-      "Norway",
-      4055,
+      "Bandung bukan hanya letak geografis melainkan tiris",
+      "Bandung",
+      200,
       [
         "assets/images/cabins_0.jpg",
         "assets/images/cabins_1.jpg",
@@ -163,6 +163,33 @@ List<Featured> getFeaturedList(){
       "2018",
       "Top 10 Destinations",
       "assets/images/destination.jpg",
+    ),
+  ];
+}
+
+class DataNotif {
+  String title;
+  String categoryPromo;
+  String content;
+
+  DataNotif(this.title, this.categoryPromo, this.content);
+}
+List<DataNotif> getListNotifikasi(){
+  return <DataNotif>[
+    DataNotif(
+      "Pesanan mu sedang di proses",
+      "Checkout",
+      "pesanan kamu sedang diproses oleh pihak penyedia jasa",
+    ),
+    DataNotif(
+      "Pembayaran mu sudah terverifikasi",
+      "Verification",
+      "akhirnyaa pembayaran mu sudah terverifikasi!!!!",
+    ),
+    DataNotif(
+      "Hot sale, liburan bareng pasangan ke Labuan Bajo!",
+      "Promo",
+      "Ya iyalah bikin kalap! Tapi tenang, soalnya bisa hemat sampai 50%",
     ),
   ];
 }
